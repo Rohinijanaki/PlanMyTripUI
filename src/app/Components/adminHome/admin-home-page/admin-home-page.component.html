@@ -1,0 +1,25 @@
+<div class="container">
+    <h1 class="text">All Packages</h1>
+    <button type="button" class="btn btn-primary" routerLink="Add_Package">Create New Package</button><hr>
+    <table class="table" *ngIf="packages && packages.length>0">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Package Name</th>
+                <th>Destination</th>
+                <th> </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let Package of packages">
+                <td>{{Package.packageId}}</td>
+                <td>{{Package.packageName}}</td>
+                <td>{{Package.destination}}</td>
+                <td><a [routerLink]="['/Admin','Edit_Package',Package.packageId]"><button>View/Edit</button></a></td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!packages || packages.length<=0">No Packages Found!!!</p>
+
+</div>

@@ -1,0 +1,61 @@
+<div class="container my-5">
+    <h1 class="mb-3">Add New Package</h1>
+
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="EditPackages()">
+                <div class="mb-3">
+                    <label for="id" class="form-label">Package Id</label>
+                    <input type="number" class="form-control" id="id" readonly
+                    name="id" [(ngModel)]="EditPackageRequest.packageId">
+                  </div>
+
+                <div class="mb-3">
+                  <label for="name" class="form-label">Package Name</label>
+                  <input type="text" class="form-control" id="name"
+                  name="name" [(ngModel)]="EditPackageRequest.packageName">
+                </div>
+
+                <div class="mb-3">
+                  <label for="price" class="form-label">Package Price</label>
+                  <input type="number" class="form-control" id="price"
+                  name="price" [(ngModel)]="EditPackageRequest.packagePrice">
+                </div>
+
+                <div class="mb-3">
+                  <label for="dis_price" class="form-label">Package Discount Price</label>
+                  <input type="number" class="form-control" id="dis_price"
+                  name="dis_price" [(ngModel)]="EditPackageRequest.packageDisPrice">
+                </div>
+
+                <div class="mb-3">
+                    <label for="destination" class="form-label">Destination</label>
+                    <input type="text" class="form-control" id="destination"
+                    name="destination" [(ngModel)]="EditPackageRequest.destination">
+                </div>
+
+                <div class="mb-3">
+                  <label for="duration" class="form-label">Duration</label>
+                  <input type="text" class="form-control" id="duration"
+                  name="duration" [(ngModel)]="EditPackageRequest.duration">
+                </div>
+
+                <div class="mb-3">
+                  <label for="personCount" class="form-label">Person Count</label>
+                  <input type="number" class="form-control" id="personCount"
+                  name="personCount" [(ngModel)]="EditPackageRequest.personCount">
+                </div>
+
+                <div class="mb-3">
+                    <label for="packageDetails" class="form-label">Package Details</label>
+                    <input type="text" class="form-control" id="packageDetails"
+                    name="packageDetails" [(ngModel)]="EditPackageRequest.packageDetails">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Edit Package</button>
+                <button type="button" class="btn btn-danger" (click)="DeletePackages(EditPackageRequest.packageId)">Delete Package</button>
+              </form>
+        </div>
+    </div>
+    
+</div>

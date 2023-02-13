@@ -1,0 +1,19 @@
+<div class="container">
+    <h1 class="text-center">Packages</h1>
+    <div *ngIf="packages && packages.length>0">
+        <div class="package-block col-3" *ngFor="let Package of packages">
+
+        
+            <div>{{Package.packageId}}</div>
+            <div>{{Package.packageName}}</div>
+            <div>{{Package.packagePrice}}</div>
+            <div>{{Package.packageDisPrice}}</div>
+            <div>{{Package.destination}}</div>
+            <div>{{Package.duration}}</div>
+            <div>{{Package.personCount}}</div>
+            <div>{{Package.packageDetails}}</div>
+            <div></div>
+        </div>
+    </div>
+    <p *ngIf="!packages || packages.length<=0">No Packages Found!!!</p>
+</div>
